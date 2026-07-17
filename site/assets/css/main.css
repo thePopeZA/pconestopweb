@@ -99,7 +99,7 @@ p{margin:0 0 1em}
 .btn-primary{background:var(--ink);color:#fff}
 .btn-primary:hover{background:var(--ink-lift);box-shadow:var(--shadow)}
 .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
-.btn-ghost:hover{border-color:var(--brand);color:var(--brand-deep)}
+.btn-ghost:hover{background:var(--mint);border-color:var(--mint);color:var(--ink)}
 .btn-light{background:#fff;color:var(--ink)}
 .btn-light:hover{box-shadow:var(--shadow)}
 
