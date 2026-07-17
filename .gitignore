@@ -4,3 +4,6 @@ node_modules/
 *.log
 .env
 .env.*
+
+# runtime cache written by site/api/featured.php
+site/api/.featured-cache.json

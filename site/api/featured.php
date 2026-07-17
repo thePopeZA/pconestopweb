@@ -89,12 +89,21 @@ function parse_products(string $html): array
             continue;
         }
 
-        $img = '';
-        foreach ($xp->query('.//img', $card) as $imgNode) {
-            $src = $imgNode->getAttribute('src') ?: $imgNode->getAttribute('data-src');
-            if ($src && !str_contains($src, 'logo') && !str_contains($src, 'flag')) {
-                $img = $src;
-                break;
+        /* the thumbnail lives in a sibling .thumb anchor, so the price container
+           alone often has no <img>; widen the search to its parent as a fallback */
+        $img    = '';
+        $scopes = [$card];
+        if ($card->parentNode instanceof DOMElement) {
+            $scopes[] = $card->parentNode;
+        }
+        foreach ($scopes as $scope) {
+            foreach ($xp->query('.//img', $scope) as $imgNode) {
+                $src = $imgNode->getAttribute('src') ?: $imgNode->getAttribute('data-src');
+                if ($src && !str_contains($src, 'logo') && !str_contains($src, 'flag')
+                    && !str_contains($src, 'placeholder')) {
+                    $img = $src;
+                    break 2;
+                }
             }
         }
 
