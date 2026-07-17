@@ -189,7 +189,7 @@ p{margin:0 0 1em}
 .prod .stock{font-family:var(--font-mono);font-size:.72rem;color:var(--signal)}
 .prod .stock.low{color:var(--amber)}
 .prod .save{
-  position:absolute;top:.7rem;left:.7rem;background:var(--amber);color:#fff;
+  position:absolute;top:.7rem;left:.7rem;background:var(--mint);color:var(--ink);
   font-family:var(--font-mono);font-size:.68rem;font-weight:700;padding:.25em .6em;border-radius:5px;
 }
 .prod-fallback{display:none}
