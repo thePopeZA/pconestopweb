@@ -16,15 +16,16 @@
 }
 
 :root{
-  /* ---- palette (edit these to match logo) ---- */
-  --ink:        #0B1F33;   /* deep navy — text, dark bands */
+  /* ---- palette: dark navy + green (edit these to match logo/robot) ---- */
+  --ink:        #0B1F33;   /* deep navy — primary buttons, dark bands, text */
+  --ink-lift:   #14344F;   /* navy button hover / lift */
   --ink-soft:   #3B5064;   /* secondary text */
   --paper:      #F4F7FA;   /* page background */
   --surface:    #FFFFFF;   /* cards */
   --line:       #DCE5EE;   /* borders */
-  --brand:      #0E63D8;   /* primary blue */
-  --brand-deep: #0A4DA8;   /* hover / emphasis */
-  --brand-tint: #E7F0FC;   /* light blue fills */
+  --brand:      #12A15E;   /* green — accent: links, emphasis, hovers, focus */
+  --brand-deep: #0C7C48;   /* deeper green — hover / emphasis */
+  --brand-tint: #E4F6ED;   /* light green fills */
   --signal:     #12A15E;   /* live / in-stock green */
   --signal-tint:#E4F6ED;
   --amber:      #E8850C;   /* deals / save */
@@ -94,8 +95,8 @@ p{margin:0 0 1em}
   border:2px solid transparent;transition:transform .15s,box-shadow .15s,background .15s,color .15s;
 }
 .btn:active{transform:translateY(1px)}
-.btn-primary{background:var(--brand);color:#fff}
-.btn-primary:hover{background:var(--brand-deep);box-shadow:var(--shadow)}
+.btn-primary{background:var(--ink);color:#fff}
+.btn-primary:hover{background:var(--ink-lift);box-shadow:var(--shadow)}
 .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
 .btn-ghost:hover{border-color:var(--brand);color:var(--brand-deep)}
 .btn-light{background:#fff;color:var(--ink)}
