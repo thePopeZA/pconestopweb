@@ -7,3 +7,6 @@ node_modules/
 
 # runtime cache written by site/api/featured.php
 site/api/.featured-cache.json
+
+# deployment zips (manual cPanel File Manager uploads)
+*.zip
